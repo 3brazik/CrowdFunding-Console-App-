@@ -80,19 +80,16 @@ def validate_fields(id, line):
             projectname = validate_name()
             line[1] = projectname
             edited_line.append(line)
-            print("Editing field")
             return edited_line[0]
         elif edited_field == "details":
             project_details = validate_details()
             line[2] = project_details
             edited_line.append(line)
-            print("editing field")
             return edited_line[0]
         elif edited_field == "target":
             target = str(validate_total_target())
             line[3] = target
             edited_line.append(line)
-            print("editing field")
             return edited_line[0]
         elif edited_field == "startdate" or edited_field == "enddate":
             project_start_Date = str(validate_date()[0])
@@ -100,7 +97,6 @@ def validate_fields(id, line):
             line[4] = project_start_Date
             line[7] = project_end_Date
             edited_line.append(line)
-            print("editing field")
             return edited_line[0]
     else:
-        print("no available field")
+        print(" ERROR ")
